@@ -1,3 +1,4 @@
-# Optimized-LineageOS flashable packages (ex. OptimizedCM)
+# Optimized-LineageOS flashable packages 
 
 Flashable packages for Optimized CM 14.1 ROMs
+(ex. OptimizedCM)
