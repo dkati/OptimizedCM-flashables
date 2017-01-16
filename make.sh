@@ -28,6 +28,11 @@ if [ ! -d "$AROMA_DIR" ]; then
 fi
 cd flashables
 
+echo "Removing old packages..."
+cd Products
+rm -rf Optimized*
+cd ..
+
 echo "Updating packages from Aroma directory..."
 
 echo "Updating Snap Camera..."
