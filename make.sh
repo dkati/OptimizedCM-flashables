@@ -20,6 +20,13 @@
 # limitations under the License.
 
 FILENAME=Optimized-LineageOS
+AROMA_DIR=aroma
+cd ..
+if [ ! -d "$AROMA_DIR" ]; then
+	echo "No AROMA directory found.Please check your sources"
+	exit -1;
+fi
+cd flashables
 
 echo "Updating packages from Aroma directory..."
 
