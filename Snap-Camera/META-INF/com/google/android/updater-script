@@ -1,0 +1,32 @@
+ui_print("");ui_print("");ui_print("");ui_print("");ui_print("");ui_print("");
+
+ui_print("Installing Snap camera, please wait a moment...");
+ui_print("-----------------------------------------");
+
+ui_print("Mounting system");
+ui_print("");
+
+run_program("/sbin/busybox", "mount", "/system");
+
+ui_print("Deleting old Snap camera if exist...");
+delete_recursive("/system/priv-app/Snap");
+
+ui_print("Installing new Snap Camera...");
+package_extract_dir("snapcam/Snap","/system/priv-app/Snap");
+set_perm(0, 0, 0644, "/system/priv-app/Snap/Snap.apk");
+set_perm(0, 0, 0644, "/system/priv-app/Snap/oat/arm/Snap.odex");
+
+ui_print("Deleting old camera libraries...");
+delete_recursive("/system/lib/libjni_snapimageutil.so");
+delete_recursive("/system/lib/libjni_snapmosaic.so");
+delete_recursive("/system/lib/libjni_snaptinyplanet.so");
+
+ui_print("Extracting new camera libraries...");
+package_extract_dir("lib","/system/lib");
+set_perm(0, 0, 0644, "/system/lib/libjni_snapimageutil.so");
+set_perm(0, 0, 0644, "/system/lib/libjni_snapmosaic.so");
+set_perm(0, 0, 0644, "/system/lib/libjni_snaptinyplanet.so");
+
+
+unmount("/system");
+show_progress(0.100000, 0);
