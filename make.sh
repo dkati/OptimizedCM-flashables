@@ -21,6 +21,30 @@
 
 FILENAME=Optimized-LineageOS
 
+echo "Updating packages from Aroma directory..."
+
+echo "Updating Snap Camera..."
+cd Snap-Camera
+rm -rf lib && rm -rf snapcam
+cd ..
+cp -r ../aroma/jdc/camera/lib Snap-Camera/lib
+cp -r ../aroma/jdc/camera/snapcam Snap-Camera/snapcam
+
+echo "Updating Google Apps for N..."
+cd Google-Apps-Nougat
+rm -rf wallpaper && rm -rf launcher
+cd ..
+cp -r ../aroma/jdc/google/wallpaper Google-Apps-Nougat/wallpaper
+cp -r ../aroma/jdc/google/launcher Google-Apps-Nougat/launcher
+
+echo "Updating stock kernel..."
+cd Stock-Kernel
+rm -rf stock
+cd ..
+cp -r ../aroma/jdc/kernel/stock/ Stock-Kernel/stock
+
+echo "Making flashables..."
+
 cd Snap-Camera
 echo "Making flashable for ${PWD##*/} "
 zip -rq9 ../Products/"$FILENAME"-"${PWD##*/}".zip *
