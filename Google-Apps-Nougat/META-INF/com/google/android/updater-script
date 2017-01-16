@@ -1,0 +1,20 @@
+ui_print("");ui_print("");ui_print("");ui_print("");ui_print("");ui_print("");
+
+ui_print("Installing Nougat Google Apps, please wait a moment...");
+ui_print("-----------------------------------------");
+
+ui_print("Mounting system");
+ui_print("");
+
+ui_print("Remove old packages if exist...");
+delete_recursive("/system/priv-app/Wallpaper/Wallpaper.apk");
+delete recursive("/system/priv-app/NexusLauncher/NexusLauncher.apk");
+
+ui_print("Installing Pixel Launcher and Wallpaper apps...");
+package_extract_dir("launcher","/system/priv-app/NexusLauncher");
+package_extract_dir("wallpaper","/system/priv-app/Wallpaper");
+set_perm(0, 0, 0644, "/system/priv-app/NexusLauncher/NexusLauncher.apk");
+set_perm(0, 0, 0644, "/system/priv-app/Wallpaper/Wallpaper.apk");
+
+unmount("/system");
+show_progress(0.100000, 0);
