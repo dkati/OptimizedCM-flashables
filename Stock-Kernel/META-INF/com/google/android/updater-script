@@ -4,6 +4,7 @@ ui_print("Installing Stock kernel, please wait a moment...");
 ui_print("-----------------------------------------");
 
 ui_print("Mounting system");
+run_program("/sbin/busybox", "mount", "/system");
 ui_print("");
 
 ui_print("");
