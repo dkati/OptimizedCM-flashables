@@ -5,6 +5,7 @@ ui_print("-----------------------------------------");
 
 ui_print("Mounting system");
 ui_print("");
+run_program("/sbin/busybox", "mount", "/system");
 
 ui_print("Remove old packages if exist...");
 delete_recursive("/system/priv-app/Wallpaper/Wallpaper.apk");
