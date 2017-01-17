@@ -72,6 +72,11 @@ echo "Making flashable for ${PWD##*/} "
 zip -rq9 ../Products/"$FILENAME"-"${PWD##*/}".zip *
 cd ..
 
+cd Stock-Camera
+echo "Making flashable for ${PWD##*/} "
+zip -rq9 ../Products/"$FILENAME"-"${PWD##*/}".zip *
+cd ..
+
 echo "Done"
 exit 0;
 

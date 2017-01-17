@@ -22,6 +22,7 @@
 cp -r Products/Optimized-LineageOS-Google-Apps-Nougat.zip Release/Optimized-LineageOS-Google-Apps-Nougat.zip
 cp -r Products/Optimized-LineageOS-Snap-Camera.zip Release/Optimized-LineageOS-Snap-Camera.zip
 cp -r Products/Optimized-LineageOS-Stock-Kernel.zip Release/Optimized-LineageOS-Stock-Kernel.zip
+cp -r Products/Optimized-LineageOS-Stock-Camera.zip Release/Optimized-LineageOS-Stock-Camera.zip
 rm -rf Products/Optimized*
 
 echo "Released..."
