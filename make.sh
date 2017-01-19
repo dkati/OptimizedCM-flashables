@@ -21,14 +21,21 @@
 
 FILENAME=Optimized-LineageOS
 AROMA_DIR=aroma
+PRODUCT_DIR=Products
 cd ..
 if [ ! -d "$AROMA_DIR" ]; then
 	echo "No AROMA directory found.Please check your sources"
 	exit -1;
 fi
+
+
 cd flashables
 
+if [ ! -d "$PRODUCT_DIR" ]; then
+	mkdir $PRODUCT_DIR
+fi
 echo "Removing old packages..."
+
 cd Products
 rm -rf Optimized*
 cd ..
