@@ -47,7 +47,14 @@ cd Stock-Camera
 rm -rf lib && rm -rf Camera2
 cd ..
 cp -r ../aroma/jdc/camera/aospcam/Camera2 Stock-Camera/Camera2
-cp -r ../aroma/jdc/camera/lib Stock-Camera/Camera2/lib
+cd Stock-Camera/Camera2
+mkdir lib
+cd lib
+mkdir arm
+cd ../../..
+cp -r ../aroma/jdc/camera/lib/libjni_jpegutil.so Stock-Camera/Camera2/lib/arm/libjni_jpegutil.so
+cp -r ../aroma/jdc/camera/lib/libjni_tinyplanet.so Stock-Camera/Camera2/lib/arm/libjni_tinyplanet.so
+
 
 echo "Updating Google Apps for N..."
 cd Google-Apps-Nougat
