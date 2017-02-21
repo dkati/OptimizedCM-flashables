@@ -42,12 +42,12 @@ cd ..
 
 echo "Updating packages from Aroma directory..."
 
-echo "Updating Snap Camera..."
-cd Snap-Camera
-rm -rf lib && rm -rf snapcam
+echo "Updating AOSP Camera..."
+cd Stock-Camera
+rm -rf lib && rm -rf Camera2
 cd ..
-cp -r ../aroma/jdc/camera/lib Snap-Camera/lib
-cp -r ../aroma/jdc/camera/snapcam Snap-Camera/snapcam
+cp -r ../aroma/jdc/camera/aospcam/Camera2 Stock-Camera/Camera2
+cp -r ../aroma/jdc/camera/lib Stock-Camera/Camera2/lib
 
 echo "Updating Google Apps for N..."
 cd Google-Apps-Nougat
