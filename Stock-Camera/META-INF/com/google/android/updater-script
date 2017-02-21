@@ -14,8 +14,13 @@ ui_print("Installing AOSP stock camera..");
 package_extract_dir("Camera2","/system/app/Camera2");
 set_perm(0, 0, 0644, "/system/app/Camera2/Camera2.apk");
 set_perm(0, 0, 0644, "/system/app/Camera2/oat/arm/Camera2.odex");
+set_perm(0, 0, 0644, "/system/app/Camera2/lib/arm/libjni_jpegutil.so");
+set_perm(0, 0, 0644, "/system/app/Camera2/lib/arm/libjni_tinyplanet.so");
+
 package_extract_dir("Camera2/lib","/system/lib");
 set_perm(0, 0, 0644, "/system/lib/libjni_jpegutil.so");
 set_perm(0, 0, 0644, "/system/lib/libjni_tinyplanet.so");
+
+
 unmount("/system");
 show_progress(0.100000, 0);
