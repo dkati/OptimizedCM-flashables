@@ -23,7 +23,7 @@ delete_recursive("/system/lib/libjni_snaptinyplanet.so");
 
 ui_print("Extracting new camera libraries...");
 package_extract_dir("lib","/system/lib");
-set_perm(0, 0, 0644, "/system/lib/libjni_imageutil.so");
+set_perm(0, 0, 0644, "/system/lib/libjni_snapimageutil.so");
 set_perm(0, 0, 0644, "/system/lib/libjni_snapmosaic.so");
 set_perm(0, 0, 0644, "/system/lib/libjni_snaptinyplanet.so");
 
